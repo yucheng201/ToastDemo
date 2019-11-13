@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 int height = text.getHeight();
                 Log.i("MainActivity", "绘制开始------" + "  height = " + height);
             }
+
+
         });
     }
 
