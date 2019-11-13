@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * 异常,仅在7.0上报错
+     * 异常,仅在7.1上报错 ,Toast类中 handleShow(token)，8.0已经加上了try catch{}
+     * 7.1之下handleShow(token)是没有这个token的。7.1之上对WindowManager.LayoutParams.TYPE_TOAST做了限制使其不显示在其他应用之上
      * WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@b7c964a is not valid; is your activity running?
      *  并且异常是发生在我们的下一个 UI 线程消息中，因此我们在上一个 ui 线程消息中加入 try-catch 是没有意义的
      * @param view
